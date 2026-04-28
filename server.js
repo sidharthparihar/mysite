@@ -119,14 +119,24 @@ function renderIndex(res) {
     // Replace Books
     let booksHtml = '';
     config.books.forEach(b => {
+        const stars = b.user_rating ? '★'.repeat(Math.round(b.user_rating)) + '☆'.repeat(5 - Math.round(b.user_rating)) : '';
+        const statusLabel = b.reading_status ? `<span class="status-badge">${b.reading_status.replace('-', ' ')}</span>` : '';
+        const highlightClass = b.highlight ? 'highlight-book' : '';
+
         booksHtml += `
-        <div class="book-card">
-            <div class="book-image" style="background-image: url('${b.image}');"></div>
+        <a href="${b.goodreads_url}" target="_blank" class="book-card ${highlightClass}">
+            <div class="book-image" style="background-image: url('${b.cover_image}');"></div>
+            <div class="book-overlay">
+                <div class="book-details">
+                    <p class="book-rating">${stars}</p>
+                    ${statusLabel}
+                </div>
+            </div>
             <div class="book-info">
                 <h4>${b.title}</h4>
                 <p>${b.author}</p>
             </div>
-        </div>
+        </a>
         `;
     });
     html = html.replace('{{BOOKS_ITEMS}}', booksHtml);
