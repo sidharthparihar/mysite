@@ -99,24 +99,46 @@
   ],
   "books": [
     {
-      "title": "Life 3.0",
-      "author": "Max Tegmark",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490284481i/34272427.jpg"
+      "title": "Red Rising (Red Rising Saga, #1)",
+      "author": "Pierce Brown",
+      "average_rating": 4.26,
+      "user_rating": 4,
+      "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1461354651l/15839976.jpg",
+      "goodreads_url": "https://www.goodreads.com/review/show/8297654661?utm_medium=api&utm_source=rss",
+      "reading_status": "read",
+      "date_added": "2026-01-01",
+      "date_read": null,
+      "highlight": false,
+      "tags": ["fantasy", "sci-fi"],
+      "display_priority": "high"
     },
     {
-      "title": "Superintelligence",
-      "author": "Nick Bostrom",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1402237851i/20527133.jpg"
+      "title": "Nemesis Games (The Expanse, #5)",
+      "author": "James S.A. Corey",
+      "average_rating": 4.45,
+      "user_rating": null,
+      "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1654567652l/22886612.jpg",
+      "goodreads_url": "https://www.goodreads.com/review/show/8287754321?utm_medium=api&utm_source=rss",
+      "reading_status": "read",
+      "date_added": "2025-12-25",
+      "date_read": null,
+      "highlight": false,
+      "tags": ["fantasy", "sci-fi"],
+      "display_priority": "low"
     },
     {
-      "title": "The Big Picture",
-      "author": "Sean Carroll",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1453051410i/26150770.jpg"
-    },
-    {
-      "title": "Deep Learning",
-      "author": "Ian Goodfellow",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1484157744i/31328094.jpg"
+      "title": "The Wise Man's Fear (The Kingkiller Chronicle, #2)",
+      "author": "Patrick Rothfuss",
+      "average_rating": 4.54,
+      "user_rating": 5,
+      "cover_image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1452624345l/1215032.jpg",
+      "goodreads_url": "https://www.goodreads.com/review/show/8287754221?utm_medium=api&utm_source=rss",
+      "reading_status": "read",
+      "date_added": "2025-12-25",
+      "date_read": "2025-12-25",
+      "highlight": true,
+      "tags": ["fantasy", "sci-fi"],
+      "display_priority": "high"
     }
   ]
 }

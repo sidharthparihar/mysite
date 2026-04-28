@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
+const { getAllBooks } = require('./lib/goodreads');
 const app = express();
 
 // Set up multer for file uploads
@@ -17,6 +18,27 @@ const upload = multer({ storage: storage });
 
 app.use(express.json());
 app.use(express.static(__dirname, { index: false }));
+
+const GOODREADS_USER_ID = '194760406';
+const CACHE_TTL = 3600 * 1000; // 1 hour
+let lastUpdate = 0;
+
+async function syncGoodreads() {
+    console.log('Syncing with Goodreads...');
+    try {
+        const books = await getAllBooks(GOODREADS_USER_ID);
+        if (books && books.length > 0) {
+            const configPath = path.join(__dirname, 'config.json');
+            const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+            config.books = books;
+            fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+            lastUpdate = Date.now();
+            console.log(`Synced ${books.length} books successfully.`);
+        }
+    } catch (e) {
+        console.error('Failed to sync Goodreads:', e);
+    }
+}
 
 // Utility to render the template
 function renderIndex(res) {
@@ -143,8 +165,12 @@ function renderIndex(res) {
 }
 
 // Routes
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
     try {
+        // Auto-refresh if cache expired
+        if (Date.now() - lastUpdate > CACHE_TTL) {
+            syncGoodreads(); // Run in background
+        }
         renderIndex(res);
     } catch (e) {
         res.sendFile(path.join(__dirname, 'index.html'));
@@ -177,4 +203,7 @@ const PORT = 8000;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
     console.log(`Admin dashboard at http://localhost:${PORT}/admin`);
+    
+    // Initial sync on startup
+    syncGoodreads();
 });
