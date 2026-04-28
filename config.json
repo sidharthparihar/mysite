@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "line1": "Sidharth Parihar",
+    "line2": "AI DEVELOPER",
+    "subtext": "B.Tech, IIT Kanpur // Bitwise Inc. // Kota, India"
+  },
+  "manifesto": {
+    "text": "I am an AI developer and engineer based in Kota, India. Trained as a bioengineer at IIT Kanpur, I found my calling at the intersection of intelligent systems and software — building machines that think, speak, and act."
+  },
+  "about": "I am Sidharth Parihar — an AI Developer and engineer currently working at Bitwise Inc. in Kota, India. I hold a B.Tech in Bioengineering from IIT Kanpur, and I have spent the years since building systems at the frontier of artificial intelligence. My work spans autonomous agents, voice-enabled applications, and large-scale cloud deployments across Azure and AWS.",
+  "work": [
+    {
+      "title": "AGENTIC SYSTEMS",
+      "number": "01",
+      "desc": "I design autonomous agents that reason, plan, and execute — systems built to operate independently at scale.",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "title": "RAG PIPELINES",
+      "number": "02",
+      "desc": "I architect retrieval systems that ground language models in real knowledge — making AI responses precise and trustworthy.",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "title": "VOICE INTEGRATION",
+      "number": "03",
+      "desc": "I build applications that listen and speak — bringing natural voice interfaces to life using state-of-the-art speech models.",
+      "image": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "title": "MODEL DISTILLATION",
+      "number": "04",
+      "desc": "I compress intelligence — taking large, powerful models and refining them into lean, production-ready systems.",
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "title": "CLOUD ARCHITECTURE",
+      "number": "05",
+      "desc": "I deploy and orchestrate AI workloads across cloud infrastructure — ensuring they are resilient, scalable, and production-grade.",
+      "image": "https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=1600&q=80"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Trainee Programmer - DART",
+      "company": "Bitwise Inc",
+      "duration": "Nov 2024 – Present",
+      "desc": "Designing scalable Python solutions and architecting on Azure. Building datasets, deploying RAG pipelines, and integrating voice models (Whisper, Deepgram)."
+    },
+    {
+      "role": "B.Tech Bioengineering",
+      "company": "IIT Kanpur",
+      "duration": "2017 – 2022",
+      "desc": "Developed a strong analytical foundation for problem-solving in complex systems."
+    }
+  ],
+  "skills": [
+    "Python",
+    "C++",
+    "Java",
+    "AWS Bedrock / Strands",
+    "Azure AI Foundry",
+    "Docker",
+    "RAG / vLLM",
+    "PostgreSQL"
+  ],
+  "parallax": {
+    "title": "PRECISION",
+    "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=2000&q=80"
+  },
+  "contact": {
+    "name": "Sidharth Parihar",
+    "email": "pariharsidharth0@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/sidharth-parihar-484458163/",
+    "instagram": "https://www.instagram.com/iamsid_art/",
+    "github": "https://github.com/pariharsidharth0/",
+    "steam": "https://steamcommunity.com/id/pariharsidharth0/",
+    "cv_url": "#"
+  },
+  "github_projects": [
+    { "title": "xsound", "desc": "Rust-based audio routing engine and interface.", "url": "https://github.com/pariharsidharth0/xsound" }
+  ],
+  "steam_games": [
+    { "title": "PUBG: BATTLEGROUNDS", "hours": "1,100 hrs", "image": "https://steamcdn-a.akamaihd.net/steam/apps/578080/library_600x900.jpg" },
+    { "title": "Counter-Strike 2", "hours": "1,013 hrs", "image": "https://steamcdn-a.akamaihd.net/steam/apps/730/library_600x900.jpg" },
+    { "title": "Delta Force", "hours": "903 hrs", "image": "https://steamcdn-a.akamaihd.net/steam/apps/2507950/library_600x900.jpg" },
+    { "title": "Battlefield 2042", "hours": "890 hrs", "image": "https://steamcdn-a.akamaihd.net/steam/apps/1517290/library_600x900.jpg" }
+  ],
+  "gallery": [
+    {
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "books": [
+    {
+      "title": "Life 3.0",
+      "author": "Max Tegmark",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490284481i/34272427.jpg"
+    },
+    {
+      "title": "Superintelligence",
+      "author": "Nick Bostrom",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1402237851i/20527133.jpg"
+    },
+    {
+      "title": "The Big Picture",
+      "author": "Sean Carroll",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1453051410i/26150770.jpg"
+    },
+    {
+      "title": "Deep Learning",
+      "author": "Ian Goodfellow",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1484157744i/31328094.jpg"
+    }
+  ]
+}
