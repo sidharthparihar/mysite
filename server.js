@@ -118,13 +118,14 @@ function renderIndex(res) {
     
     // Replace Books
     let booksHtml = '';
-    config.books.forEach(b => {
+    config.books.forEach((b, index) => {
         const stars = b.user_rating ? '★'.repeat(Math.round(b.user_rating)) + '☆'.repeat(5 - Math.round(b.user_rating)) : '';
         const statusLabel = b.reading_status ? `<span class="status-badge">${b.reading_status.replace('-', ' ')}</span>` : '';
         const highlightClass = b.highlight ? 'highlight-book' : '';
+        const hiddenClass = index >= 6 ? ' hidden-book' : '';
 
         booksHtml += `
-        <a href="${b.goodreads_url}" target="_blank" class="book-card ${highlightClass}">
+        <a href="${b.goodreads_url}" target="_blank" class="book-card ${highlightClass}${hiddenClass}">
             <div class="book-image" style="background-image: url('${b.cover_image}');"></div>
             <div class="book-overlay">
                 <div class="book-details">
