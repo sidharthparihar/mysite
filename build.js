@@ -80,9 +80,10 @@ function build() {
     html = html.replace('{{STEAM_GAMES}}', steamHtml);
     
     let booksHtml = '';
-    config.books.forEach(b => {
+    config.books.forEach((b, index) => {
+        const hiddenClass = index >= 6 ? ' hidden-book' : '';
         booksHtml += `
-        <div class="book-card">
+        <div class="book-card${hiddenClass}">
             <div class="book-image" style="background-image: url('${b.image}');"></div>
             <div class="book-info">
                 <h4>${b.title}</h4>

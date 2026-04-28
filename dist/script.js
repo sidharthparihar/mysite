@@ -191,12 +191,42 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrollTrigger: { trigger: ".books-section", start: "top 80%", once: true },
                 x: 0, opacity: 1, duration: 0.9, ease: "power3.out"
             });
-            gsap.set(".book-card", { opacity: 0, x: 80 });
-            gsap.to(".book-card", {
+            // Only animate initially visible books
+            gsap.set(".book-card:not(.hidden-book)", { opacity: 0, x: 80 });
+            gsap.to(".book-card:not(.hidden-book)", {
                 scrollTrigger: { trigger: ".books-section", start: "top 70%", once: true },
                 opacity: 1, x: 0,
                 duration: 0.8, stagger: 0.12, ease: "power3.out"
             });
+
+            // Toggle Button Logic
+            const bookToggleBtn = document.getElementById('books-toggle-btn');
+            if (bookToggleBtn) {
+                bookToggleBtn.addEventListener('click', () => {
+                    const hiddenBooks = document.querySelectorAll('.hidden-book');
+                    const isExpanded = bookToggleBtn.classList.contains('expanded');
+                    
+                    if (isExpanded) {
+                        // Collapse
+                        hiddenBooks.forEach(book => {
+                            book.classList.remove('show-book');
+                        });
+                        bookToggleBtn.querySelector('.btn-text').innerText = 'SHOW ALL BOOKS';
+                        bookToggleBtn.classList.remove('expanded');
+                        // Scroll back to section
+                        lenis.scrollTo('.books-section', { offset: -50, duration: 1.2 });
+                    } else {
+                        // Expand
+                        hiddenBooks.forEach(book => {
+                            book.classList.add('show-book');
+                            gsap.fromTo(book, { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" });
+                        });
+                        bookToggleBtn.querySelector('.btn-text').innerText = 'SHOW LESS';
+                        bookToggleBtn.classList.add('expanded');
+                    }
+                    ScrollTrigger.refresh();
+                });
+            }
         }
 
         // Steam — Title reveal + staggered card entrance
